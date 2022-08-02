@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<meta charset="UTF-8" />
+		<meta name="theme-color" content="rgb(36,37,41)">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+
+<style>
+body {margin:0;
+	background: rgb(36,37,41);
+}
+
+
+.styled-table, .styled-table2 {
+    border-spacing: 0px;
+    position: relative;
+    margin-top: 0px;
+    padding-left: 0px;
+    margin-left: auto; 
+    margin-right: auto;
+    font-size: 1em;
+    font-family: sans-serif;
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    align: center;
+}
+.styled-table, .styled-table2 thead tr {
+    position: sticky;
+    text-align: center;
+    font-size: 0.8em;
+}
+.styled-table thead th,
+.styled-table thead td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.styled-table th {
+    color: rgb(174,192,112);
+    padding-right: 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+}
+.styled-table td {
+    color: rgb(240,248,186);
+    padding-right: 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+}
+.styled-table2 td {	
+    padding-right: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+}	
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+.styled-table tbody tr:nth-of-type(odd) {
+    background: rgba(4,45,54,0.1);
+}
+.styled-table tbody tr:nth-of-type(even) {
+    background: rgba(7,109,127,0.1);
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+img {border-radius: 45%;
+	border:  6px solid rgba(0, 0, 0, 0.1); }
+h2 {color: rgb(240,248,186);
+   font-size: 2em;
+   text-shadow: 1px 2px 1px black,
+               0px 0px 1px green;
+		
+}
+a {text-shadow: 1px 1px 1px white;
+   font-size: 1.5em;	}
+</style>
+
+
+
+
+	<body>
+<table class="styled-table">
+    <thead>
+        <tr >
+            <th>NFT</th>
+            <th>Floor</br>price</th>
+            <th>Sales</br>24h</th>
+            <th>Sales</br>7d</th>		
+        </tr>
+    </thead>
+    <tbody>
+         <tr onclick="window.location='https://opensea.io/collection/the-plague?search[sortAscending]=true&search[sortBy]=PRICE&search[toggles][0]=BUY_NOW';">
+            <td>
+		<img src="https://lh3.googleusercontent.com/izJoLNVOJnj7W7GW_hdg8pwOTohxgJ9Z2w1E8iZdAWd2NXkqQWxKY2FCOaWPvNzixyQ0kV6RcwSajYVocPzwtANaV5nQETvGwMNb_g=s130" width="55" height="55">
+		</td>
+	    <td><h2 id="floor_price_tp"></h2></td>
+	    <td><a id="one_day_sales_tp"></a></td>
+            <td><a id="seven_day_sales_tp"></a></td>
+	    
+        </tr>
+        <tr onclick="window.location='https://opensea.io/collection/ugly-people-torrealba?search[sortBy]=PRICE&search[sortAscending]=true&search[toggles][0]=BUY_NOW';">
+            <td>
+		<img src="https://lh3.googleusercontent.com/b16MIrgz9g5P-WLPmKvQJaPl5xYHJXzMFQ83oce_rDUYeTrmdYlCQ8WAH7IyROwSEloo5zBHosqVL_aB6oT3iq9jTAaUEswUPNr1=s130" width="55" height="55">
+		</td>
+	    <td><h2 id="floor_price_up"></h2></td>
+	    <td><a id="one_day_sales_up"></a></td>
+            <td><a id="seven_day_sales_up"></a></td>
+	    
+        </tr>
+       <tr onclick="window.location='https://opensea.io/collection/fortune-friends-club-official-nft?search[sortBy]=PRICE&search[sortAscending]=true&search[toggles][0]=BUY_NOW';">
+            <td>
+		<img src="https://lh3.googleusercontent.com/hMbOHECbaMtuobe66b0D3XL7c27SCjuR-TB1YmyTOYv7fLEZqMjE_Qv-Y5sMuyz5wV3QlxSaiUOOlJ2_FsI26fRoEUE1Jh6RAFPowA=s130" width="55" height="55">
+		</td>
+	    <td><h2 id="floor_price_ff"></h2></td>
+	    <td><a id="one_day_sales_ff"></a></td>
+            <td><a id="seven_day_sales_ff"></a></td>
+	   
+        </tr>
+	 <tr onclick="window.location='https://opensea.io/collection/xoxonft?search[sortAscending]=true&search[sortBy]=PRICE&search[toggles][0]=BUY_NOW';">
+            <td>
+		<img src="https://openseauserdata.com/files/6da02ea9ba0feb28567e40ace1b390b2.gif" width="55" height="55">
+		</td>
+	    <td><h2 id="floor_price_xoxo"></h2></td>
+	    <td><a id="one_day_sales_xoxo"></a></td>
+            <td><a id="seven_day_sales_xoxo"></a></td>
+	   
+        </tr>  
+	<tr onclick="window.location='https://opensea.io/collection/morethangamersnftmtg?search[sortBy]=PRICE&search[sortAscending]=true&search[toggles][0]=BUY_NOW';">
+            <td>
+		<img src="https://lh3.googleusercontent.com/NKIm3YiJegP-njvy3m6Fwq7MvGmIvHCngCeY_TwFaM01AxFUO9OESvwH6JNRiNIdwitaswS65gQmQk-uiJhZ2zi2m274wVvUaOk7-g=s130" width="55" height="55">
+		</td>
+	    <td><h2 id="floor_price_mtg"></h2></td>
+	    <td><a id="one_day_sales_mtg"></a></td>
+            <td><a id="seven_day_sales_mtg"></a></td>
+	    
+        </tr>
+        <tr onclick="window.location='';">
+            <td>
+		<img src="https://lh3.googleusercontent.com/4h7-UTGVirGYcO3Q9o_As9GvYVXzN9679VAm-nLokK8FJtPW9aqwHwhzY_Jet466uvTsCVfbng7P4991WNUax4gjUJkw4YoVtFp8HA=s168" width="55" height="55">
+		</td>
+	    <td><h2 id="floor_price_sek"></h2></td>
+	    <td><a id="one_day_sales_sek"></a></td>
+            <td><a id="seven_day_sales_sek"></a></td>
+	    
+        </tr>
+	<tr onclick="window.location='';">
+            <td>
+		<img src="https://lh3.googleusercontent.com/44uszvFuhdf8IBjTlaVoPPlLufgUVQw9zlU3wMVPB7_P2-B1cRl8dZwrwEozUPWaWgX7iFLFrFVDxIz2qEsEJEsjPgMj7L50OEK1sQ=s130" width="55" height="55">
+		</td>
+	    <td><h2 id="floor_price_tms"></h2></td>
+	    <td><a id="one_day_sales_tms"></a></td>
+            <td><a id="seven_day_sales_tms"></a></td>
+	    
+        </tr>
+	<tr onclick="window.location='';">
+            <td>
+		<img src="https://lh3.googleusercontent.com/P9GncWlHc4G5dC3EZuJVTL1hnVR4e4mj_OjofacuHqPBdM7Kn5S2DOIAd-Wpg1pAa8jh4_gHj4KC3jcP9txOuXMtbhSfk0v1JZHp7g=s130" width="55" height="55">
+		</td>
+	    <td><h2 id="floor_price_cd"></h2></td>
+	    <td><a id="one_day_sales_cd"></a></td>
+            <td><a id="seven_day_sales_cd"></a></td>
+	   
+        </tr>
+	<tr onclick="window.location='';">    
+        <td>
+		<img src="https://lh3.googleusercontent.com/5uj0X--87WO060UfkLyVF3aGlz-WxKIlkrhUvCM6IypB32V8Y1PgXqNu6LgMNt72B30GmVmAi8M6t6dZ327AxhZjGgc0VsrLFixCjA=s130" width="55" height="55">
+		</td>
+	    <td><h2 id="floor_price_fef"></h2></td>
+	    <td><a id="one_day_sales_fef"></a></td>
+            <td><a id="seven_day_sales_fef"></a></td>
+	    
+	</tr>
+	<tr onclick="window.location='';">    
+	 <td>
+		<img src="https://lh3.googleusercontent.com/c_wASW_EH06TmUJTAfZ9HYAx8rhKbu3SbOqpHHp0OistKOTJcPDjhSBg3S6OM3HG9ivBpVVtSnKkNJKilZQCc_8V1kTG7JQDSzmWoQ=s168" width="55" height="55">
+		</td>
+	    <td><h2 id="floor_price_seals"></h2></td>
+	    <td><a id="one_day_sales_seals"></a></td>
+            <td><a id="seven_day_sales_seals"></a></td>
+	    
+	</tr>	
+	 
+
+    </tbody>
+</table>
+<table class="styled-table2">
+<tr onclick="window.location='';">    
+        <td>
+		ETH
+		</td>
+	    <td><h1 id="floor_price_mojaadresa"></h1></td>
+            <td><h1 id="one_day_sales_mojaadresa"></h1></td>
+
+        </tr>
+</table>
+
+<script>
+
+	
+const options_cd = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/cooldogsofficial/stats', options_cd)
+  .then(response => response.json())
+  .then(data => {let podaci_cd = data;
+cd_fp = podaci_cd.stats.floor_price.toFixed(3);		 
+document.getElementById("floor_price_cd").textContent = cd_fp; 
+document.getElementById("one_day_sales_cd").textContent = podaci_cd.stats.one_day_sales; 
+document.getElementById("seven_day_sales_cd").textContent = podaci_cd.stats.seven_day_sales;  
+		 
+})
+  .catch(err => console.error(err));
+	
+const options_ff = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/fortune-friends-club-official-nft/stats', options_ff)
+  .then(response => response.json())
+  .then(data => {let podaci_ff = data;
+window.ff_fp = podaci_ff.stats.floor_price.toFixed(3);		 
+document.getElementById("floor_price_ff").textContent = ff_fp; 
+document.getElementById("one_day_sales_ff").textContent = podaci_ff.stats.one_day_sales; 
+document.getElementById("seven_day_sales_ff").textContent = podaci_ff.stats.seven_day_sales;  
+})
+  .catch(err => console.error(err)); 	
+
+	
+const options_mtg = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/morethangamersnftmtg/stats', options_mtg)
+  .then(response => response.json())
+  .then(data => {let podaci_mtg = data;
+document.getElementById("floor_price_mtg").textContent = podaci_mtg.stats.floor_price.toFixed(3); 
+document.getElementById("one_day_sales_mtg").textContent = podaci_mtg.stats.one_day_sales; 
+document.getElementById("seven_day_sales_mtg").textContent = podaci_mtg.stats.seven_day_sales;  
+})
+  .catch(err => console.error(err)); 	
+
+
+const options_tms = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/themoosesociety/stats', options_tms)
+  .then(response => response.json())
+  .then(data => {let podaci_tms = data;
+tms_fp = podaci_tms.stats.floor_price.toFixed(3);		 
+document.getElementById("floor_price_tms").textContent = tms_fp; 
+document.getElementById("one_day_sales_tms").textContent = podaci_tms.stats.one_day_sales; 
+document.getElementById("seven_day_sales_tms").textContent = podaci_tms.stats.seven_day_sales; 
+})
+  .catch(err => console.error(err)); 
+	
+
+const options_tp = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/the-plague/stats', options_tp)
+  .then(response => response.json())
+  .then(data => {let podaci_tp = data;
+tp_fp = podaci_tp.stats.floor_price.toFixed(3);	
+document.getElementById("floor_price_tp").textContent = tp_fp; 
+document.getElementById("one_day_sales_tp").textContent = podaci_tp.stats.one_day_sales; 
+document.getElementById("seven_day_sales_tp").textContent = podaci_tp.stats.seven_day_sales; 
+})
+  .catch(err => console.error(err)); 	
+
+const options_up = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/ugly-people-torrealba/stats', options_up)
+  .then(response => response.json())
+  .then(data => {let podaci_up = data;
+up_fp = podaci_up.stats.floor_price.toFixed(3);	 
+document.getElementById("floor_price_up").textContent = up_fp; 
+document.getElementById("one_day_sales_up").textContent = podaci_up.stats.one_day_sales; 
+document.getElementById("seven_day_sales_up").textContent = podaci_up.stats.seven_day_sales;  
+})
+  .catch(err => console.error(err)); 	
+
+const options_fef = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/felinefiendznft/stats', options_fef)
+  .then(response => response.json())
+  .then(data => {let podaci_fef = data;
+document.getElementById("floor_price_fef").textContent = podaci_fef.stats.floor_price.toFixed(3); 
+document.getElementById("one_day_sales_fef").textContent = podaci_fef.stats.one_day_sales; 
+document.getElementById("seven_day_sales_fef").textContent = podaci_fef.stats.seven_day_sales; 
+})
+  .catch(err => console.error(err)); 
+
+const options_sek = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/sekaiclub/stats', options_sek)
+  .then(response => response.json())
+  .then(data => {let podaci_sek = data;
+sek_fp = podaci_sek.stats.floor_price.toFixed(3);		 
+document.getElementById("floor_price_sek").textContent = sek_fp; 
+document.getElementById("one_day_sales_sek").textContent = podaci_sek.stats.one_day_sales; 
+document.getElementById("seven_day_sales_sek").textContent = podaci_sek.stats.seven_day_sales; 
+})
+  .catch(err => console.error(err));
+
+const options_xoxo = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/xoxonft/stats', options_xoxo)
+  .then(response => response.json())
+  .then(data => {let podaci_xoxo = data;
+xoxo_fp = podaci_xoxo.stats.floor_price.toFixed(3);		 
+document.getElementById("floor_price_xoxo").textContent = xoxo_fp; 
+document.getElementById("one_day_sales_xoxo").textContent = podaci_xoxo.stats.one_day_sales; 
+document.getElementById("seven_day_sales_xoxo").textContent = podaci_xoxo.stats.seven_day_sales;  
+})
+  .catch(err => console.error(err));
+	
+const options_seals = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/sappy-seals/stats', options_seals)
+  .then(response => response.json())
+  .then(data => {let podaci_seals = data;
+seals_fp = podaci_seals.stats.floor_price.toFixed(3);		 
+document.getElementById("floor_price_seals").textContent = seals_fp; 
+document.getElementById("one_day_sales_seals").textContent = podaci_seals.stats.one_day_sales; 
+document.getElementById("seven_day_sales_seals").textContent = podaci_seals.stats.seven_day_sales; 
+})
+  .catch(err => console.error(err));	
+	
+	
+const options_mojaadresa = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.etherscan.io/api?module=account&action=balance&address=0x62FFEFD4F48ae27F04233Ee053f676e2F772837b', options_mojaadresa)
+  .then(response => response.json())
+  .then(data => {let podaci_mojaadresa = data;
+  let mojestanje = podaci_mojaadresa.result/1000000000000000000;
+document.getElementById("floor_price_mojaadresa").textContent = "0x62F";   		 
+document.getElementById("one_day_sales_mojaadresa").textContent = mojestanje.toFixed(3); 
+})
+  .catch(err => console.error(err));
+</script>
+	</body>
+</html>
