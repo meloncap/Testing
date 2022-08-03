@@ -99,9 +99,9 @@ a {text-shadow: 1px 1px 1px white;
         </tr>
     </thead>
     <tbody>
-         <tr onclick="window.location='https://opensea.io/collection/the-plague?search[sortAscending]=true&search[sortBy]=PRICE&search[toggles][0]=BUY_NOW';">
+         <tr onclick="window.location='https://opensea.io/collection/sansboy?search[sortAscending]=true&search[sortBy]=PRICE&search[toggles][0]=BUY_NOW';">
             <td>
-		<img src="https://lh3.googleusercontent.com/izJoLNVOJnj7W7GW_hdg8pwOTohxgJ9Z2w1E8iZdAWd2NXkqQWxKY2FCOaWPvNzixyQ0kV6RcwSajYVocPzwtANaV5nQETvGwMNb_g=s130" width="55" height="55">
+		<img src="https://openseauserdata.com/files/e9305d0c458ab095a484bcb16013ba8a.png" width="55" height="55">
 		</td>
 	    <td><h2 id="floor_price_tp"></h2></td>
 	    <td><a id="one_day_sales_tp"></a></td>
@@ -208,7 +208,7 @@ a {text-shadow: 1px 1px 1px white;
 
 	
 const options_cd = {method: 'GET', headers: {Accept: 'application/json'}};
-fetch('https://api.opensea.io/api/v1/collection/cooldogsofficial/stats', options_cd)
+fetch('https://api.opensea.io/api/v1/collection/sansboy/stats', options_cd)
   .then(response => response.json())
   .then(data => {let podaci_cd = data;
 cd_fp = podaci_cd.stats.floor_price.toFixed(3);		 
@@ -320,15 +320,7 @@ document.getElementById("seven_day_sales_seals").textContent = podaci_seals.stat
   .catch(err => console.error(err));	
 	
 	
-const options_mojaadresa = {method: 'GET', headers: {Accept: 'application/json'}};
-fetch('https://api.etherscan.io/api?module=account&action=balance&address=0x62FFEFD4F48ae27F04233Ee053f676e2F772837b', options_mojaadresa)
-  .then(response => response.json())
-  .then(data => {let podaci_mojaadresa = data;
-  let mojestanje = podaci_mojaadresa.result/1000000000000000000;
-document.getElementById("floor_price_mojaadresa").textContent = "0x62F";   		 
-document.getElementById("one_day_sales_mojaadresa").textContent = mojestanje.toFixed(3); 
-})
-  .catch(err => console.error(err));
+
 </script>
 	</body>
 </html>
